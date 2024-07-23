@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Linki — Kurs HTML | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar"
+				                                              src="/img/Icons/icon_html-5.png"> HTML</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_html-5.png">HTML</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Paragraph.html">Paragraf</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Attributes.html">Atrybuty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Lista uporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_unordered.html">Lista nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Linki</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Links.html">Linki</a></li>
+									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Link_sitelink.html">Linki do podstron </a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Images.html">Obrazy</a></li>
+									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Table_attributes.html">Atrybuty tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Symbols.html">Symbole</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Quotations.html">Cytaty</a></li>
+									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+						<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+						<li><a href="Layout_HTML.html">Układ strony</a></li>
+						<li><a href="Responsiveness.html">Responsywność</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Linki</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="section-with-image">
+				<div class="text-centered text-padding highlight-container">
+					<h1>Linki</h1>
+					<p>
+						Link HTML, zwany również hiperłączem, to element, który pozwala na przenoszenie użytkownika
+						między stronami internetowymi lub na inne części tej samej strony. Linki są tworzone za pomocą
+						tagu <span>&lta&gt</span> w języku HTML i mogą być używane do przenoszenia na strony internetowe, pliki,
+						obrazy, filmy, sekcje na stronie itp.
+					</p>
+				</div>
+				<img alt="" src="/img/Vectors/vector129.png">
+			</div>
+			<p class="text-container orange-container article tooltip no-margin-top line-height-plus">
+				Linki tworzy się za pomocą tagu <code><a
+					pro-tip="Służy do tworzenia hiperłączy, czyli klikalnych odnośników, które prowadzą do innych stron internetowych lub do różnych części tej samej strony">&lta&gt <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>.
+				oraz atrybutu <code><a
+					pro-tip="Określa adres URL, do którego link prowadzi. Może to być adres strony internetowej, pliku wideo lub innej strony wewnętrznej lub zewnętrznej">href <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> który służy do określenia adresu
+				<code><a pro-tip="To adres strony lub pliku, do którego odwołuje się odnośnik">URL <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> docelowego dla linku.
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+&lt;a href=&quot;https://www.google.com&quot;&gt;Odwied&zacute; nasz&aogon; stron&eogon;&lt;/a&gt;
+								</code>
+						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-padding">
+						<a href="https://www.google.com/" target="_blank">Odwiedź naszą stronę</a>
+					</div>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<h2><img alt="" class="icon-img-big" src="/img/Icons/icon_targetAtribute.png"> Atrybut target</h2>
+			<p class="text-content-500width article tooltip">
+				Atrybut target w tagu <code><a
+					pro-tip="Służy do tworzenia hiperłączy, czyli klikalnych odnośników, które prowadzą do innych stron internetowych lub do różnych części tej samej strony">&lta&gt <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> służy do określenia, w jakim oknie lub zakładce przeglądarki ma być otwarty link.
+			</p>
+			<p class="text-container article tooltip orange-container line-height-plus">
+				Najczęściej używane wartości atrybutów <code><a
+					pro-tip="Określa sposób, w jaki przeglądarka ma otworzyć docelowy link. ">target <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> to między innymi:
+				<code><a pro-tip="Otwiera odnośnik w nowym oknie lub karcie przeglądarki.">_blank <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> oraz
+				<code><a pro-tip="Otwiera odnośnik w tym samym oknie lub karcie przeglądarki (domyślnie).">_self <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+&lt;!-- Klikni&eogon;cie na link otworzy nowe okno przegl&aogon;darki z adresem &quot;https://www.google.com&quot; --&gt;
+
+&lt;a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot;&gt;Link do innej strony&lt;/a&gt;
+
+
+
+&lt!-- Klikni&eogon;cie na link &quot;O nas&quot; przeniesie u&zdot;ytkownika do sekcji z id &quot;about&quot; na tej samej stronie --&gt
+
+&lt;a href=&quot;#about&quot; target=&quot;_self&quot;&gt;O nas&lt;/a&gt;
+								</code>
+						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-padding">
+						<a href="https://www.google.com" target="_blank">Link do innej strony</a><br><br>
+						<a href="#about" target="_self">O nas</a>
+					</div>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Link_section.html"><button>Dalej</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

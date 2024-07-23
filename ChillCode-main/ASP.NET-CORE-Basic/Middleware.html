@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<title>Middleware i żądania HTTP — Kurs ASP.NET | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+		<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_ASP.NET-Core.html"><img alt=""
+				                                                      class="icon-img-navbar" src="/img/Icons/icon_NET_Core_Logo.png"> ASP.NET</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_NET_Core_Logo.png">ASP.NET</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
+									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li class="is-selected"><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="roadmap-list hide-roadmaplist">
+				<ol>
+						<li><a href="Introduction_to_ASP.NET-Core.html">Wprowadzenie do ASP.NET</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Project_structure.html">Struktura projektu</a></li>
+						<li><a href="Create_controllers_and_actions.html">Tworzenie kontrolerów i akcji</a></li>
+						<li><a href="Routing.html">Routing</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Modelowanie danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Data_modeling.html">Modelowanie danych</a></li>
+									<li><a class="navbar-drop-text" href="Entity_Framework_Core.html">Entity Framework Core</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Widoki RazorViewEngine i TagHelpers</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="RazorViewEngine.html">Widoki Razor View Engine</a></li>
+									<li><a class="navbar-drop-text" href="TagHelpers_views.html">Widoki Tag Helpers</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Access_to_the_data.html">Dostęp do danych</a></li>
+						<li class="is-selected"><a href="Middleware.html">Middleware</a></li>
+						<li><a href="Implementation_of_authentication.html">Implementacja uwierzytelnienia</a></li>
+						<li><a href="Error_handling.html">Obsługa błędów</a></li>
+						<li><a href="Application_styling.html">Stylowanie aplikacji</a></li>
+						<li><a href="Implementation_of_RESTful_services.html">Implementacja serwisów RESTful</a></li>
+						<li><a href="WebSockets_implementation.html">Implementacja WebSocketów</a></li>
+						<li><a href="Application_testing.html">Testowanie aplikacji</a></li>
+						<li><a href="Application_debugging.html">Debugowanie aplikacji</a></li>
+						<li><a href="Application_deployment.html">Wdrażanie aplikacji</a></li>
+						<li><a href="Integration_with_other_technologies.html">Integracja z innymi technologiami</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
+
+		<div class="opacity-function padding-content">
+			<div class="content">
+				<div class="section-with-image">
+					<div class="text-centered text-padding">
+						<h1>Middleware i żądania HTTP</h1>
+						<p>
+							Middleware w ASP.NET Core to oprogramowanie, które przetwarza żądania HTTP i generuje odpowiedzi. Każde żądanie HTTP w aplikacji ASP.NET Core przechodzi przez zestaw middleware'ów, które przetwarzają żądanie i/lub odpowiedź.Można utworzyć niestandardowe middleware'y w celu wykonywania określonych operacji, takich jak logowanie, uwierzytelnianie, weryfikacja uprawnień i wiele innych.
+						</p>
+					</div>
+					<img alt="" src="/img/Vectors/vector54.png">
+				</div>
+				<p class="text-container lightBrown-container no-margin-top">
+					Aby utworzyć niestandardowe middleware w ASP.NET Core, należy utworzyć klasę, która implementuje interfejs IMiddleware, a następnie zarejestrować ją w kolekcji middleware'ów w metodzie Configure klasy Startup.
+				</p>
+				<div class="big-page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_http(3).png"> Utworzenie middleware do logowania żądań HTTP:</h3>
+				</div>
+				<div class="code-block code-block-margin-top">
+ 						<pre>
+ 								<code>
+public class LoggingMiddleware : IMiddleware
+{
+  private readonly ILogger&ltLoggingMiddleware&gt _logger;
+
+  public LoggingMiddleware(ILogger&ltLoggingMiddleware&gt logger)
+  {
+      _logger = logger;
+  }
+
+  public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+  {
+      _logger.LogInformation($"Handling HTTP request: {context.Request.Method} {context.Request.Path}");
+      await next(context);
+  }
+}
+ 								</code>
+ 						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card  alert-card-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W tym przykładzie utworzono klasę LoggingMiddleware, która implementuje interfejs IMiddleware. Konstruktor klasy przyjmuje interfejs ILogger, który umożliwia zapisywanie logów. Metoda InvokeAsync zawiera kod, który loguje informacje o żądaniu HTTP, a następnie wywołuje kolejny middleware w łańcuchu.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="text-centered">
+					<h3 class="color-text-white"><img alt="" class="icon-img-small"
+					                                  src="/img/Icons/icon_configure(1).png"> Rejestracja middleware'u w klasie Startup, w metodzie Configure:</h3>
+				</div>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    // ...
+
+    app.UseMiddleware&ltLoggingMiddleware&gt();
+
+    // ...
+}
+								</code>
+						</pre>
+				</div>
+				<div class="minus-margin-top"></div>
+				<div class="alert-card  alert-card-gray highlight-container highlight-container-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W tym przykładzie zarejestrowano middleware <span>LoggingMiddleware</span> za pomocą metody <span>UseMiddleware</span> na obiekcie <span>IApplicationBuilder</span>.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="alert-card  alert-card-blue">
+					<img alt="" src="/img/Icons/icon_emergency.png">
+					<b>Ważne</b>
+					<div class="line"></div>
+					<p>
+						Kolejność rejestracji middleware'ów jest ważna, ponieważ każdy middleware w łańcuchu przetwarza żądanie HTTP w kolejności rejestracji.
+					</p>
+				</div>
+				<div class="alert-card ">
+					<img alt="" src="/img/Icons/icon_note.png">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						Można również wykorzystać wbudowane middleware'y w ASP.NET Core do przetwarzania żądań HTTP i odpowiedzi. Na przykład, middleware UseRouting służy do przetwarzania routingu żądań HTTP, a middleware UseEndpoints służy do przetwarzania żądań HTTP i generowania odpowiedzi.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+					<a href="Implementation_of_authentication.html"><button>Dalej</button></a>
+				</div>
+			</div>
+		</div>
+</div>
+</body>
+</html>

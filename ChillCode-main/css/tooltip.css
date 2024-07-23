@@ -1,0 +1,87 @@
+/* Tool-tip elements */
+.tooltip a {
+	position: relative;
+	font-size: inherit;
+	color: #e4e4e4;
+	text-decoration: none;
+}
+
+.tooltip a:after {
+	position: absolute;
+	background-color: #fdeee3;
+	content: attr(pro-tip);
+	color: black;
+	margin: auto;
+	bottom: 45px;
+	text-align: center;
+	border-radius: 7px;
+	font-size: 13px;
+	font-weight: bold;
+	border: 4px solid #0e0d0d;
+	line-height: 1.3rem;
+	max-height: 300px;
+	overflow-y: auto;
+
+	padding: 10px;
+	left: -50%;
+	right: 0;
+	width: 32vw;
+}
+
+
+.tooltip a:before, .tooltip a:after {
+	display: none;
+}
+
+.tooltip a:hover:before, .tooltip a:hover:after {
+	display: block;
+	z-index: 1;
+	white-space: break-spaces; /* --możliwość popsucia*/
+}
+
+/*.miniTooltip a:after{
+	width: auto;
+}*/
+
+@media only screen and (min-width: 768px) {
+	.miniTooltip a:after {
+		width: 200px;
+	}
+
+	.tooltip a:after {
+		font-size: 13px;
+		padding: 10px;
+		left: -20%;
+		right: 0;
+		max-width: 260px;
+		width: 27vw;
+	}
+
+}
+
+@media only screen and (min-width: 1199px) {
+	.tooltip a:after {
+		position: absolute;
+		width: 300px;
+		max-height: 300px;
+		background-color: #fdeee3;
+		content: attr(pro-tip);
+		padding: 10px 20px 10px;
+		color: black;
+		margin: auto;
+		right: 0;
+		left: -100%;
+		bottom: 45px;
+		text-align: center;
+		border-radius: 7px;
+		font-size: 14px;
+		font-weight: bold;
+		border: 4px solid #0e0d0d;
+	}
+
+}
+
+/*
+.tooltip a:after.left-auto{
+	left: auto;
+}*/

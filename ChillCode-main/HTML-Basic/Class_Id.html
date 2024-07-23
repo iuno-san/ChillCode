@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<title>Klasy oraz Id — Kurs HTML | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_HTML.html"><img alt="" class="icon-img-navbar"
+				                                              src="/img/Icons/icon_html-5.png"> HTML</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_html-5.png">HTML</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Paragraf</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Paragraph.html">Paragraf</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+									<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Attributes.html">Atrybuty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Lista uporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_unordered.html">Lista nieuporządkowana</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_definition.html">Lista definicyjna</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Links.html">Linki</a></li>
+									<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Link_sitelink.html">Linki do podstron </a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Images.html">Obrazy</a></li>
+									<li><a class="navbar-drop-text" href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+									<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+									<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Table_attributes.html">Atrybuty tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Symbols.html">Symbole</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Quotations.html">Cytaty</a></li>
+									<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+						<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+						<li class="is-selected"><a href="Class_Id.html">Klasy oraz Id</a></li>
+						<li><a href="Layout_HTML.html">Układ strony</a></li>
+						<li><a href="Responsiveness.html">Responsywność</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+		<ol>
+			<li><a href="Introduction_to_HTML.html">Wprowadzenie do HTML</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Base_HTML_document.html">Podstawowy dokument HTML</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Paragraf</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Paragraph.html">Paragraf</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_heading.html">Nagłówek</a></li>
+						<li><a class="navbar-drop-text" href="Paragraph_new_line.html">Nowa linia</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text_HTML.html">Formatowanie tekstu</a></li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_values.html">Wartości kolorów</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Attributes.html">Atrybuty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Lista</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Lista uporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_unordered.html">Lista nieuporządkowana</a></li>
+						<li><a class="navbar-drop-text" href="List_definition.html">Lista definicyjna</a></li>
+						<li><a class="navbar-drop-text" href="Lists_nesting.html">Zagnieżdżanie list</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Linki</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Links.html">Linki</a></li>
+						<li><a class="navbar-drop-text" href="Link_section.html">Linki do sekcji</a></li>
+						<li><a class="navbar-drop-text" href="Link_sitelink.html">Linki do podstron </a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Obrazy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Images.html">Obrazy</a></li>
+						<li><a class="navbar-drop-text"
+						       href="Images_width_and_height.html">Szerokość i Wysokość</a></li>
+						<li><a class="navbar-drop-text" href="Images_title_and_signature.html">Tytuł i Podpis</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_scope.html">Zasięg tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_sections.html">Sekcje tabeli</a></li>
+						<li><a class="navbar-drop-text" href="Table_attributes.html">Atrybuty tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Symbols.html">Symbole</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Cytaty</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Quotations.html">Cytaty</a></li>
+						<li><a class="navbar-drop-text" href="Quote_elements.html">Elementy cytatów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Block_elements.html">Elementy Blokowe</a></li>
+			<li><a href="Linear_elements.html">Elementy Liniowe</a></li>
+			<li class="is-selected"><a href="Class_Id.html">Klasy oraz Id</a></li>
+			<li><a href="Layout_HTML.html">Układ strony</a></li>
+			<li><a href="Responsiveness.html">Responsywność</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="section-with-image">
+				<div class="text-centered text-padding highlight-container">
+					<h1>Klasy oraz Id</h1>
+					<p>
+						Atrybut <span>id</span> służy do określenia unikalnego identyfikatora dla elementu HTML. Może być
+						używany do stylizowania konkretnego elementu za pomocą CSS. Natomiast Atrybut <span>class</span> w HTML służy
+						do określenia nazwy klasy dla elementu HTML. Nazwa klasy może być używana do grupowania elementów
+						i zastosowania wspólnej stylizacji lub interakcji za pomocą JavaScript.
+					</p>
+				</div>
+				<img alt="" src="/img/Vectors/vector145.png">
+			</div>
+			<p class="text-container azure-container no-margin-top article tooltip">
+				<code><a
+						pro-tip="klasa jest atrybutem elementu, który służy do określania nazwy jednego lub więcej stylów CSS, które mają być zastosowane do tego elementu. Definicja klasy składa się z słowa kluczowego &quot;class&quot;, a następnie nazwy klasy, która może składać się z liter, cyfr, myślników i podkreśleń. Nazwa klasy nie może zaczynać się od cyfry i nie może zawierać spacji.">Klasy <img
+						alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+				oraz <code><a
+					pro-tip="ID jest atrybutem elementu, który służy do określania unikalnego identyfikatora dla danego elementu. Każdy element na stronie internetowej powinien mieć unikalny ID, który może być używany do identyfikacji elementu przez skrypty JavaScript lub do tworzenia odnośników do tego elementu. Definicja ID składa się z słowa kluczowego &quot;id&quot;, a następnie unikalnej nazwy ID.">id <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code>
+				w HTML są używane do identyfikowania elementów, aby określić, jak mają być wyświetlane na stronie. Poniżej przedstawiam przykład użycia.
+			</p>
+			<div class="big-page-header"></div>
+			<code><img alt="" class="icon-img-small" src="/img/Icons/icon_css.png">Css</code>
+			<div class="code-block">
+						<pre>
+								<code class="language-css">
+.highlight {
+    background-color: yellow;
+}
+
+.red-text {
+    color: #c21c29;
+}
+
+#intro {
+    font-size: 18px;
+    font-style: italic;
+}
+								</code>
+						</pre>
+			</div>
+			<code><img alt="" class="icon-img-small" src="/img/Icons/icon_html.png">Html</code>
+			<div class="code-block">
+						<pre>
+								<code class="language-xml">
+&lt;h1 class=&quot;highlight&quot;&gt;Nag&lstrok;&oacute;wek z klas&aogon; &quot;highlight&quot;&lt;/h1&gt;
+
+&lt;h2 id=&quot;intro&quot;&gt;Nag&lstrok;&oacute;wek z id &quot;intro&quot;&lt;/h2&gt;
+
+&lt;p class=&quot;red-text&quot;&gt;Paragraf z klas&aogon; &quot;red-text&quot;&lt;/p&gt;
+								</code>
+						</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content">
+						<div class="red-text intro highlight">
+							<h1 style="background-color: yellow;">Nagłówek z klasą "highlight"</h1>
+							<h2 class="color-text-gray" style="font-size: 18px; font-style: italic;">Nagłówek z id "intro"</h2>
+							<p style="color: #c21c29;">Paragraf z klasą "red-text"</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card  alert-card-gray highlight-container highlight-container-gray">
+				<img alt="" src="/img/Icons/icon_robotic-hand.png">
+				<b>Wyjaśnienie</b>
+				<div class="line"></div>
+				<p>
+					Ten blok kodu to HTML z wykorzystaniem klas i id do stylizacji elementów na stronie.
+					Sekcja <span>&ltstyle&gt</span> zawiera definicje stylów CSS, klasa "<span>highlight</span>" ustawia tło na żółte, klasa
+					"<span>red-text</span>" ustawia kolor tekstu na czerwony, a id "<span>intro</span>" ustawia czcionkę na 18-punktową i
+					kursywę. Elementy HTML, nagłówek h1, h2 i paragraf p, będą wyświetlane zgodnie z definicjami stylów CSS.
+				</p>
+			</div>
+			<div class="alert-card highlight-container highlight-container-purple">
+				<img alt="" src="/img/Icons/icon_note.png">
+				<b>Notatka</b>
+				<div class="line"></div>
+				<p>
+					Podsumowując, atrybut "<span>class</span>" jest bardzo przydatnym narzędziem w tworzeniu stron internetowych,
+					ponieważ umożliwia grupowanie elementów i zastosowanie wspólnej stylizacji lub interakcji dla
+					kilku elementów na stronie.
+				</p>
+			</div>
+			<div class="alert-card highlight-container highlight-container-purple">
+				<img alt="" src="/img/Icons/icon_note.png">
+				<b>Notatka</b>
+				<div class="line"></div>
+				<p>
+					Podsumowując, atrybut "<span>id</span>" jest bardzo przydatnym narzędziem w tworzeniu stron internetowych,
+					ponieważ umożliwia precyzyjne określenie elementów na stronie do celów stylizacji lub interakcji
+					za pomocą skryptów.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Layout_HTML.html"><button>Dalej</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<title>XML — Kurs C# | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+		<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_Csharp.html"><img alt=""
+				                                                class="icon-img-navbar" src="/img/Icons/icon_c-sharp.png"> C#</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_c-sharp.png">C#</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a> </li>
+						<li><a href="Comments.html">Komentarze</a> </li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
+						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+						<li><a href="Interfaces.html">Interfejsy</a></li>
+						<li><a href="Static_classes.html">Klasy statyczne</a></li>
+						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text"
+									       href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="JSON.html">JSON</a></li>
+						<li class="is-selected"><a href="XML.html">XML</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+		<div class="roadmap-list hide-roadmaplist">
+				<ol>
+						<li><a href="Introduction_to_Csharp.html">Wprowadzenie do C#</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="First_program.html">Pierwszy program</a> </li>
+						<li><a href="Comments.html">Komentarze</a> </li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy danych</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Value_types.html">Typy wartościowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Reference_types.html">Typy referencyjne</a></li>
+									<li><a class="navbar-drop-text" href="Pointer_types.html">Typy wskaźnikowe</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zmienne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Variables.html">Zmienne</a></li>
+									<li><a class="navbar-drop-text" href="Defining_variables.html">Definiowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Initializing_variables.html">Inicjowanie zmiennych</a></li>
+									<li><a class="navbar-drop-text" href="Accepting_data_from_the_user.html">Akceptowanie danych od użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pola</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Fields.html">Pola</a></li>
+									<li><a class="navbar-drop-text" href="Private_fields.html">Prywatne pola</a></li>
+									<li><a class="navbar-drop-text" href="Protected_fields.html">Chronione pola</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwości</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Properties.html">Właściwości</a></li>
+									<li><a class="navbar-drop-text" href="Automatic_properties.html">Właściwości automatyczne</a></li>
+									<li><a class="navbar-drop-text" href="Validation.html">Walidacja</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Stałe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Constant.html">Stałe</a></li>
+									<li><a class="navbar-drop-text" href="Literals.html">Literały</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Metody</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Methods.html">Metody</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Calling_methods.html">Wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Recursive_method_calling.html">Rekurencyjne wywoływanie metod</a></li>
+									<li><a class="navbar-drop-text" href="Passing_parameters_methods.html">Przekazywanie parametrów do metod</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Instrukcje warunkowe</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="If_statement.html">Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_statement.html">Instrukcja (else)</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Else_if_statement.html">Instrukcja (else if)</a></li>
+									<li><a class="navbar-drop-text" href="Switch_statement.html">Instrukcja (Switch)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_if_statement.html">Zagnieżdżona Instrukcja (if)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_switch_statement.html">Zagnieżdżona Instrukcja (switch)</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pętle</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="For_loops.html">Pętla (for)</a></li>
+									<li><a class="navbar-drop-text" href="While_loops.html">Pętla (while)</a></li>
+									<li><a class="navbar-drop-text" href="Do_while_loops.html">Pętla (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_for_loops.html">Zagnieżdżanie Pętli (for)</a></li>
+									<li><a class="navbar-drop-text" href="Nested_while_loops.html">Zagnieżdżenie Pętli (while) i (do while)</a></li>
+									<li><a class="navbar-drop-text" href="Break_command.html">Polecenie break</a></li>
+									<li><a class="navbar-drop-text" href="Continue_command.html">Polecenie continue</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tablice</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tables.html">Tablice</a></li>
+									<li><a class="navbar-drop-text" href="Multidimensional_arrays.html">Tablice wielowymiarowe</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Jagged_arrays.html">Tablice postrzępione</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Parametric_arrays.html">Tablice parametryczne</a></li>
+									<li><a class="navbar-drop-text" href="Passing_arrays_to_method.html">Przekazywanie tablic do metody</a></li>
+									<li><a class="navbar-drop-text" href="Properties_Array_class.html">Właściwości i metody klasy Array</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Kolekcje</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Collections.html">Kolekcje</a></li>
+									<li><a class="navbar-drop-text" href="Collections_list.html">listy</a></li>
+									<li><a class="navbar-drop-text" href="Collections_dictionary.html">Słowniki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_queues.html">Kolejki</a></li>
+									<li><a class="navbar-drop-text" href="Collections_stacks.html">Stosy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Classes.html">Klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_declaration.html">Deklaracja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_methods.html">Metody klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_encapsulation.html">Hermetyzacja klasy</a></li>
+									<li><a class="navbar-drop-text" href="Class_constructor.html">Konstruktor klasy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Class_destructor.html">Destruktor klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Dziedziczenie</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Base_and_derived_class.html">Klasa bazowa i pochodna</a></li>
+									<li><a class="navbar-drop-text" href="Reference_to_base_class.html">Odwołanie do klasy bazowej</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Polimorfizm</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Polymorphism_static.html">Polimorfizm statyczny</a></li>
+									<li><a class="navbar-drop-text" href="Overloadable_operators.html">Operatory przeciążalne i nieprzeciążalne</a></li>
+									<li><a class="navbar-drop-text" href="Polymorphism_dynamic.html">Polimorfizm dynamiczny</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Konwersja typów</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Conversion_implicit.html">Niejawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_explicit.html">Jawna konwersja</a></li>
+									<li><a class="navbar-drop-text" href="Conversion_methods.html">Metody konwersji</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="String_types.html">Właściwości klasy String</a></li>
+						<li><a href="Enumerated_types.html">Typy wyliczeniowe</a></li>
+						<li><a href="Interfaces.html">Interfejsy</a></li>
+						<li><a href="Static_classes.html">Klasy statyczne</a></li>
+						<li><a href="Abstract_classes.html">Klasy Abstrakcyjne</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Przestrzenie nazw</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Namespaces.html">Przestrzenie nazw</a></li>
+									<li><a class="navbar-drop-text"
+									       href="The_using_keyword.html">Słowo kluczowe using</a></li>
+									<li><a class="navbar-drop-text" href="Namespaces_nested.html">Zagnieżdżone przestrzenie nazw</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Wyjątki</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Exceptions.html">Wyjątki</a></li>
+									<li><a class="navbar-drop-text" href="Exception_handling.html">Obsługa wyjątków</a></li>
+									<li><a class="navbar-drop-text" href="User_defined_exceptions.html">Wyjątki definiowane przez użytkownika</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Typy generyczne</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Generic_types.html">Typy generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_methods.html">Metody generyczne</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Generic_delegates.html">Delegaty generyczne</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="JSON.html">JSON</a></li>
+						<li class="is-selected"><a href="XML.html">XML</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+		</div>
+
+		<div class="opacity-function padding-content">
+			<div class="content">
+				<div class="section-with-image">
+					<div class="text-centered text-padding">
+						<h1>XML</h1>
+						<p>
+							XML (eXtensible Markup Language) jest językiem znaczników, który służy do przechowywania i
+							przekazywania danych w formie tekstowej. C# posiada bogate biblioteki do pracy z XML, takie
+							jak System.Xml oraz Linq to Xml, co pozwala na łatwe parsowanie, tworzenie i edycję plików XML.
+						</p>
+					</div>
+					<img alt="" src="/img/Vectors/vector70.png">
+				</div>
+				<p class="text-container white-container">
+					Poniżej znajduje się przykład użycia C# do tworzenia elementów i atrybutów w pliku XML:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-csharp">
+using System;
+using System.Xml;
+
+class Program
+{
+	static void Main(string[] args)
+	{
+
+	XmlDocument xmlDoc = new XmlDocument();
+
+
+	XmlElement root = xmlDoc.CreateElement("root"); // tworzymy element "root"
+
+	xmlDoc.AppendChild(root); // dodajemy element "root" jako główny element dokumentu
+
+
+
+	XmlElement osoba = xmlDoc.CreateElement("osoba"); // tworzymy element "osoba"
+
+	XmlAttribute imie = xmlDoc.CreateAttribute("imie"); // tworzymy atrybut "imie"
+
+	imie.Value = "Piotr"; // ustawiamy wartość atrybutu
+
+	osoba.Attributes.Append(imie); // dodajemy atrybut do elementu "osoba"
+
+
+
+	XmlAttribute nazwisko = xmlDoc.CreateAttribute("nazwisko"); // tworzymy atrybut "nazwisko"
+
+	nazwisko.Value = "Kowalski"; // ustawiamy wartość atrybutu
+
+	osoba.Attributes.Append(nazwisko); // dodajemy atrybut do elementu "osoba"
+
+
+
+	XmlAttribute wiek = xmlDoc.CreateAttribute("wiek"); // tworzymy atrybut "wiek"
+
+	wiek.Value = "24"; // ustawiamy wartość atrybutu
+
+	osoba.Attributes.Append(wiek); // dodajemy atrybut do elementu "osoba"
+
+
+
+	root.AppendChild(osoba); // dodajemy element "person" jako dziecko elementu "root"
+
+	xmlDoc.Save("data.xml"); // zapisujemy dokument do pliku */
+	}
+}
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+					                                                                  class="icon-img-little"
+					                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>&lt;root&gt;</p>
+                                <p>&lt;osoba imie=&quot;Piotr&quot; nazwisko=&quot;Kowalski&quot; wiek=&quot;24&quot; /&gt;</p>
+							<p>&lt;/root&gt;</p>
+						</div>
+					</div>
+				</div>
+				<div class="page-header"></div>
+				<div class="alert-card alert-card-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W powyższym przykładzie tworzymy element "root" oraz element "osoba", a następnie tworzymy atrybuty
+						"imie", "nazwisko" i "wiek" i ustawiamy ich wartości. Następnie dodajemy atrybuty do elementu
+						"osoba" oraz element "osoba" jako dziecko elementu "root". Na końcu zapisujemy cały dokument do
+						pliku "data.xml".
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container white-container">
+					Poniżej znajduje się przykład użycia C# do odczytu danych z pliku XML:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-csharp">
+using System;
+using System.Xml;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.Load("data.xml"); // Ładujemy plik XML, który został utworzony w przykładzie wcześniej
+
+        XmlNodeList elemList = xmlDoc.GetElementsByTagName("osoba"); // Pobieramy listę elementów "osoba"
+
+        for (int i = 0; i < elemList.Count; i++)
+        {
+            Console.WriteLine("Imie: " + elemList[i].Attributes["imie"].Value); // Wyświetlamy wartość atrybutu "imie"
+
+            Console.WriteLine("Nazwisko: " + elemList[i].Attributes["nazwisko"].Value); // Wyświetlamy wartość atrybutu "nazwisko"
+
+            Console.WriteLine("Wiek: " + elemList[i].Attributes["wiek"].Value); // Wyświetlamy wartość atrybutu "wiek"
+        }
+    }
+}
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+					                                                                  class="icon-img-little"
+					                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>Imie: Piotr</p>
+							<p>Nazwisko: Kowalski</p>
+							<p>Wiek: 24</p>
+						</div>
+					</div>
+				</div>
+				<div class="alert-card alert-card-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W powyższym przykładzie używamy klasy XmlDocument do załadowania pliku XML o nazwie "data.xml" ,
+						następnie pobieramy listę elementów "person" i iterujemy przez każdy z nich. Dla każdego elementu
+						"person" wyświetlamy wartości atrybutów "firstname", "lastname" i "age" na konsoli.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<p class="text-container white-container">
+					Poniżej znajduje się przykład użycia C# do edycji pliku XML:
+				</p>
+				<div class="code-block code-block-margin-top">
+						<pre>
+								<code class="language-csharp">
+using System;
+using System.Xml;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        XmlDocument xmlDoc = new XmlDocument();
+        xmlDoc.Load("data.xml"); // Ładujemy plik XML
+
+        XmlNodeList elemList = xmlDoc.GetElementsByTagName("osoba"); // Pobieramy listę elementów "osoba"
+
+        for (int i = 0; i < elemList.Count; i++)
+        {
+            if (elemList[i].Attributes["imie"].Value == "Piotr")
+            {
+                elemList[i].Attributes["wiek"].Value = "37"; // Zmieniamy wartość atrybutu "wiek"
+            }
+        }
+
+        xmlDoc.Save("data.xml"); // Zapisujemy dokument do pliku
+    }
+}
+								</code>
+						</pre>
+				</div>
+				<div class="dropdown minus-margin-top">
+					<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+					                                                                  class="icon-img-little"
+					                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+					<div class="dropdown-content">
+						<div class="output output-padding output-content">
+							<p>Imie: Piotr</p>
+							<p>Nazwisko: Kowalski</p>
+							<p>Wiek: 37</p>
+						</div>
+					</div>
+				</div>
+				<div class="alert-card alert-card-gray">
+					<img alt="" src="/img/Icons/icon_robotic-hand.png">
+					<b>Wyjaśnienie</b>
+					<div class="line"></div>
+					<p>
+						W powyższym przykładzie używamy klasy XmlDocument do załadowania pliku XML o nazwie "data.xml" ,
+						następnie pobieramy listę elementów "person" i iterujemy przez każdy z nich. Dla każdego elementu
+						"person" wyświetlamy wartości atrybutów "firstname", "lastname" i "age" na konsoli.
+					</p>
+				</div>
+				<div class="alert-card ">
+					<img alt="" src="/img/Icons/icon_note.png">
+					<b>Notatka</b>
+					<div class="line"></div>
+					<p>
+						Należy pamiętać, że takie podejście nie jest najlepszym wyborem, jeśli chodzi o modyfikację dużych plików XML, ponieważ trzeba przeczytać cały plik do pamięci, zmodyfikować i zapisać z powrotem.
+						Lepiej jest skorzystać z LINQ to XML, który pozwala na selekcję, modyfikację i zapis tylko części pliku.
+					</p>
+				</div>
+				<div class="big-page-header"></div>
+				<div class="btn">
+					<a href="Summary.html"><button>Dalej</button></a>
+				</div>
+			</div>
+		</div>
+</div>

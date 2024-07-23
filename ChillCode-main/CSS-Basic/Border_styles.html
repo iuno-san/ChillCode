@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>{Border} — Kurs CSS | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_CSS.html"><img alt="" class="icon-img-navbar"
+				                                             src="/img/Icons/icon_css(2).png"> CSS</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle"
+				                                                       src="/img/Icons/icon_css(2).png">CSS</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span
+									class="triangle"></span>Selektory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Selectors.html">Selektory elementu</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+									<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_offspring.html">Selektory potomstwa</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Comments.html">Komentarze</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Colors.html">Kolory</a></li>
+									<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Background.html">Tło</a></li>
+						<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+						<li><a href="Position.html">Pozycja</a></li>
+						<li><a href="Overflow.html">Przepełnienie</a></li>
+						<li><a href="Margins.html">Marginesy</a></li>
+						<li><a href="Padding.html">Dopełnienie</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Obramowanie</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+									<li class="is-selected"><a class="navbar-drop-text" href="Border_styles.html">Style obramowania</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Outline.html">Zarys</a></li>
+									<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Text.html">Tekst</a></li>
+						<li><a href="Fonts.html">Czcionki</a></li>
+						<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+						<li><a href="Pictures.html">Obrazy</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Tabels.html">Tabele</a></li>
+									<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+								</ul>
+							</div>
+						</li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="List.html">Listy</a></li>
+									<li><a class="navbar-drop-text"
+									       href="List_properties.html">Właściwości Listy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Z-index.html">Z-index</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Float_property.html">Właściwość float</a></li>
+									<li><a class="navbar-drop-text"
+									       href="Clear_property.html">Właściwości clear</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Combinators.html">Kombinatory</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+							<div class="dropdown-content">
+								<ul class="navbar-list-none display-inline-grid">
+									<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+									                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
+									<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+						<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+						<li><a href="Transparency.html">Przezroczystość</a></li>
+						<li><a href="Forms.html">Formularze</a></li>
+						<li><a href="Counters.html">Liczniki</a></li>
+						<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+						<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+		<ol>
+			<li><a href="Introduction_to_CSS.html">Wprowadzenie do CSS</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Selektory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Selectors.html">Selektory elementu</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_class.html">Selektory klasy</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_Id.html">Selektory Id</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_offspring.html">Selektory potomstwa</a></li>
+						<li><a class="navbar-drop-text" href="Selectors_sibling.html">Selektory rodzeństwa</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Comments.html">Komentarze</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Kolory</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Colors.html">Kolory</a></li>
+						<li><a class="navbar-drop-text" href="Color_names.html">Nazwy kolorów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Background.html">Tło</a></li>
+			<li><a href="Height_Width.html">Wysokość | Szerokość</a></li>
+			<li><a href="Position.html">Pozycja</a></li>
+			<li><a href="Overflow.html">Przepełnienie</a></li>
+			<li><a href="Margins.html">Marginesy</a></li>
+			<li><a href="Padding.html">Dopełnienie</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Obramowanie</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none display-inline-grid">
+						<li><a class="navbar-drop-text" href="Border.html">Obramowanie</a></li>
+						<li class="is-selected"><a class="navbar-drop-text"
+						                           href="Border_styles.html">Style obramowania</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zarys</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Outline.html">Zarys</a></li>
+						<li><a class="navbar-drop-text" href="Outline_styles.html">Style zarysów</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Text.html">Tekst</a></li>
+			<li><a href="Fonts.html">Czcionki</a></li>
+			<li><a href="Displaying_Items.html">Wyświetlanie Elementów</a></li>
+			<li><a href="Pictures.html">Obrazy</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Tabele</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="Tabels.html">Tabele</a></li>
+						<li><a class="navbar-drop-text" href="Table_properties.html">Właściwości tabeli</a></li>
+					</ul>
+				</div>
+			</li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Listy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text" href="List.html">Listy</a></li>
+						<li><a class="navbar-drop-text" href="List_properties.html">Właściwości Listy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Z-index.html">Z-index</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Właściwość float</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Float_property.html">Właściwość float</a></li>
+						<li><a class="navbar-drop-text" href="Clear_property.html">Właściwości clear</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Combinators.html">Kombinatory</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Pseudo Klasy</a>
+				<div class="dropdown-content">
+					<ul class="navbar-list-none display-inline-grid">
+						<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+						                                                  href="Pseudo_Class.html">Pseudo Klasy</a></li>
+						<li><a class="navbar-drop-text" href="Popular_pseudo_class.html">Popularne pseudo klasy</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="Pseudo_Elements.html">Pseudo Elementy</a></li>
+			<li><a href="Navigation_Bar.html">Pasek Nawigacyjny</a></li>
+			<li><a href="Transparency.html">Przezroczystość</a></li>
+			<li><a href="Forms.html">Formularze</a></li>
+			<li><a href="Counters.html">Liczniki</a></li>
+			<li><a href="Mathematical_Functions.html">Funkcje Matematyczne</a></li>
+			<li><a href="Attribute_Selectors.html">Selektory Atrybutów</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="text-centered text-padding">
+				<h1><img alt="" class="icon-img-small" src="/img/Icons/icon_border.png"> Najważniejsze Style Obramowania W CSS</h1>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="double-elements gap-zero">
+				<div class="display-grid page-header">
+					<p class="text-container red-container article tooltip"><code><a
+							pro-tip="Obramowanie solid jest jednolitymi ciągłymi liniami.">Solid <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie jest ciągłe i jednolite.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px solid black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: solid;padding:2px 7px;">Solid</p>
+					</div>
+				</div>
+				<div class="display-grid page-header">
+					<p class="text-container gray-container article tooltip"><code><a
+							pro-tip="Obramowanie dotted składa się z krótkich kropek, które są oddzielone od siebie przestrzenią o takiej samej długości.">Dotted <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie składa się z kropek.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Dotted black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Dotted ;padding:2px 7px;">Dotted</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="double-elements gap-zero">
+				<div class="display-grid page-header">
+					<p class="text-container red-container article tooltip"><code><a
+							pro-tip="Obramowanie dashed składa się z krótkich, przerywanych linii, które są oddzielone od siebie przestrzenią o takiej samej długości.">Dashed <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie składa się z kresek.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Dashed black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Dashed;padding:2px 7px;">Dashed</p>
+					</div>
+				</div>
+				<div class="display-grid page-header">
+					<p class="text-container gray-container article tooltip"><code><a
+							pro-tip="obramowanie double składa się z dwóch równoległych linii.">Double <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Definiuje podwójną granicę</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Double black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Double;padding:2px 7px;">Double</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="double-elements gap-zero">
+				<div class="display-grid page-header">
+					<p class="text-container red-container article tooltip"><code><a
+							pro-tip="Obramowanie groove ma efekt wklęsłej rzeźby, co sprawia wrażenie, że jest wpięte w dokument HTML.">Groove <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie jest rowkowane</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Groove black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Groove;padding:2px 7px;">Groove</p>
+					</div>
+				</div>
+				<div class="display-grid page-header">
+					<p class="text-container gray-container article tooltip"><code><a
+							pro-tip="Obramowanie ridge ma efekt wypukłej rzeźby, co sprawia wrażenie, że jest wypięte z dokumentu HTML.">Ridge <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Definiuje prążkowane obramowanie</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Ridge black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Ridge;padding:2px 7px;">Ridge</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="double-elements gap-zero">
+				<div class="display-grid page-header">
+					<p class="text-container red-container article tooltip"><code><a
+							pro-tip="Obramowanie inset ma efekt wklęsłej linii, co sprawia wrażenie, że element jest wpięty w dokument HTML.">Inset <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Definiuje wstawioną ramkę</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Inset black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Inset;padding:2px 7px;">Inset</p>
+					</div>
+				</div>
+				<div class="display-grid page-header">
+					<p class="text-container gray-container article tooltip"><code><a
+							pro-tip="Obramowanie outset ma efekt wypukłej linii, co sprawia wrażenie, że element jest wypięty z dokumentu HTML.">Outset <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Definiuje granicę początkową</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px Outset black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: Outset;padding:2px 7px;">Outset</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="double-elements gap-zero">
+				<div class="display-grid page-header">
+					<p class="text-container red-container article tooltip"><code><a
+							pro-tip="brak obramowania">none <img alt=""
+					                                             class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie nie jest widoczne.</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px none black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: none;padding:2px 7px;"></p>
+					</div>
+				</div>
+				<div class="display-grid page-header">
+					<p class="text-container gray-container article tooltip"><code><a
+							pro-tip="Nie ma obramowania, ale element wciąż zajmuje miejsce na stronie">hidden <img
+							alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> Obramowanie jest ukryte</p>
+					<div class="code-block code-block-margin-top hidden-overflow">
+								<pre>
+										<code>
+element {
+  border: 2px hidden black;
+}
+										</code>
+								</pre>
+					</div>
+					<div class="minus-margin-top">
+						<p style="border-color: #ccc3c3; border-style: hidden;padding:2px 7px;"></p>
+					</div>
+				</div>
+			</div>
+			<div class="alert-card ">
+				<img alt="" src="/img/Icons/icon_note.png">
+				<b>Notatka</b>
+				<div class="line"></div>
+				<p>
+					Obramowanie może zajmować dużo miejsca i wpłynąć na wygląd strony. Dlatego ważne jest,
+					aby dobrze przemyśleć ustawienia obramowania i upewnić się, że nie wprowadzają one negatywnego
+					wpływu na wygląd strony.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Outline.html"><button>Dalej</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

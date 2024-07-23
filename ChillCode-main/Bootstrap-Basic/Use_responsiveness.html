@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<title>Użycie responsywności — Kurs Bootstrap | ChillCode</title>
+	<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+		<div class="navbar-container link-unDecoration">
+			<div class="display-flex opacity-function mini-gap">
+				<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+						alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+						class="text-logo-first-white">Chill<span
+						class="text-logo-second-white">Code</span></span></a></span></div>
+				<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar"
+				                                        src="/img/Icons/icon_line-white.png"></div>
+				<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+						href="Introduction_to_Bootstrap.html"><img alt=""
+				                                                   class="icon-img-navbar" src="/img/Icons/icon_bootstrap.png"> Bootstrap</a></span></div>
+			</div>
+			<div class="navbar-menu">
+				<div class="hide-e"><button class="navbar-button"><img alt=""
+				                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_bootstrap.png">Bootstrap</button></div>
+				<div class="line line-gray hide-e"></div>
+				<div class="roadmap-list hide-e">
+					<ol>
+						<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+						<li><a href="Quick_start.html">Szybki start</a></li>
+						<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+						<li><a href="Class.html">Klasa</a></li>
+						<li><a href="Text_styles.html">Style tekstowe</a></li>
+						<li><a href="Components.html">Komponenty</a></li>
+						<li onclick="rotateTriangle(this)">
+							<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Zasady projektowania</a>
+							<div class="dropdown-content show">
+								<ul class="navbar-list-none display-inline-grid">
+									<li><a class="navbar-drop-text" href="Responsive_design_principles.html">Zasady projektowania</a></li>
+									<li class="is-selected"><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+						<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+						<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+						<li><a href="Summary.html">Podsumowanie</a></li>
+					</ol>
+				</div>
+				<div class="line line-gray hide-e"></div>
+				<a class="navbar-link" href="https://www.chillcode.org/"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Blog.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_blog.png"> Blog</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+						alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link" href="../Help.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+				<a class="navbar-link margin-bottom" href="../Support.html"><div
+						class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+				                                                                    class="icon-img-navbar hide-e"
+				                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+						alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			</div>
+			<div class="navbar-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+	</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+		<ol>
+			<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+			<li><a href="Quick_start.html">Szybki start</a></li>
+			<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+			<li><a href="Class.html">Klasa</a></li>
+			<li><a href="Text_styles.html">Style tekstowe</a></li>
+			<li><a href="Components.html">Komponenty</a></li>
+			<li onclick="rotateTriangle(this)">
+				<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle active"></span>Zasady projektowania</a>
+				<div class="dropdown-content show">
+					<ul class="navbar-list-none display-inline-grid">
+						<li><a class="navbar-drop-text"
+						       href="Responsive_design_principles.html">Zasady projektowania</a></li>
+						<li class="is-selected"><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+			<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+			<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+			<li><a href="Summary.html">Podsumowanie</a></li>
+		</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="text-centered">
+				<h1>Użycie responsywności</h1>
+			</div>
+			<div class="section-with-image">
+				<p>
+					Responsywne projektowanie wymaga również znajomości technologii, takich jak media queries i flexible grid systems. Te technologie pozwalają na dynamiczne dostosowanie wyglądu strony do różnych ekranów. Dlatego warto poznać te technologie i zastosować je w projekcie strony.
+				</p>
+				<img alt="" src="/img/Vectors/vector16.png">
+			</div>
+			<p class="text-container lightGreen-container no-margin-top article tooltip">
+				Użycie <code><a
+					pro-tip="Media queries to technika, która pozwala na dostosowanie stylów strony internetowej do różnych rozmiarów ekranów i urządzeń, na których jest wyświetlana. Media queries umożliwiają określenie reguł stylów, które będą stosowane w zależności od właściwości ekranu, takich jak szerokość ekranu, orientacja, rozdzielczość ekranu, proporcje ekranu itp.">media queries <img
+					alt="" class="icon-img-tooltip" src="/img/Icons/icon_tooltip.png"></a></code> do dostosowania stylów CSS do różnych ekranów:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+/* Ustawienia dla ekranów o szerokości większej niż 768 pikseli */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Ustawienia dla ekranów o szerokości mniejszej niż 768 pikseli */
+@media only screen and (max-width: 767px) {
+  .container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}
+								</code>
+						</pre>
+			</div>
+			<p class="text-container lightGreen-container">
+				Używanie <i class="highlight-text">elastycznych układów</i> do dostosowania elementów strony do różnych ekranów:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+&lt;div class="row"&gt;
+  &lt;div class="col-md-6 col-sm-12"&gt;
+    &lt;img src="image.png" alt="Obrazek" /&gt;
+  &lt;/div&gt;
+  &lt;div class="col-md-6 col-sm-12"&gt;
+    &lt;h2&gt;Tytuł&lt;/h2&gt;
+    &lt;p&gt;Treść&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+								</code>
+						</pre>
+			</div>
+			<p class="text-container lightGreen-container">
+				Używanie <i class="highlight-text">skalowalnych obrazów</i> do poprawy wydajności strony na urządzeniach mobilnych:
+			</p>
+			<div class="code-block code-block-margin-top">
+						<pre>
+								<code>
+&lt;picture&gt;
+  &lt;source srcset=&quot;image-mobile.jpg&quot; media=&quot;(max-width: 767px)&quot; /&gt;
+  &lt;img src=&quot;image.jpg&quot; alt=&quot;Obrazek&quot; /&gt;
+&lt;/picture&gt;
+								</code>
+						</pre>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="CSS_style_manipulation.html"><button>Dalej</button></a>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

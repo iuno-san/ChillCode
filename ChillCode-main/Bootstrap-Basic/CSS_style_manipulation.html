@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+		<meta charset="UTF-8">
+		<title>Manipulacja stylami CSS — Kurs Bootstrap | ChillCode</title>
+		<link href="../Basic.css" rel="stylesheet"/>
+	<link href="/img/Others/favicon.png" rel="icon">
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+
+	<!-- Highlight JS init: -->
+	<link href="/Highlight/styles/atom-one-dark.min.css" rel="stylesheet">
+	<script src="/Highlight/highlight.min.js"></script>
+	<script>hljs.highlightAll();</script>
+	<script src="/ChillCode.js"></script>
+</head>
+<body>
+
+<div class="page-content">
+	<div class="navbar">
+	<div class="navbar-container link-unDecoration">
+		<div class="display-flex opacity-function mini-gap">
+			<div class="navbar-item"><span class="learn-navbar-button"><a href="https://www.chillcode.org/"><img
+					alt="" class="icon-img-navbar" src="/img/Others/white_buckles.png"> <span
+					class="text-logo-first-white">Chill<span
+					class="text-logo-second-white">Code</span></span></a></span></div>
+			<div class="hide-on-small-screens"><img alt="" class="icon-img-navbar" src="/img/Icons/icon_line-white.png"></div>
+			<div class="navbar-item hide-on-small-screens"><span class="learn-navbar-button small-button"><a
+					href="Introduction_to_Bootstrap.html"><img alt=""
+			                                                   class="icon-img-navbar" src="/img/Icons/icon_bootstrap.png"> Bootstrap</a></span></div>
+		</div>
+		<div class="navbar-menu">
+			<div class="hide-e"><button class="navbar-button"><img alt=""
+			                                                       class="icon-img-navbar-toggle" src="/img/Icons/icon_bootstrap.png">Bootstrap</button></div>
+			<div class="line line-gray hide-e"></div>
+			<div class="roadmap-list hide-e">
+				<ol>
+					<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+					<li><a href="Quick_start.html">Szybki start</a></li>
+					<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+					<li><a href="Class.html">Klasa</a></li>
+					<li><a href="Text_styles.html">Style tekstowe</a></li>
+					<li><a href="Components.html">Komponenty</a></li>
+					<li onclick="rotateTriangle(this)">
+						<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+						<div class="dropdown-content">
+							<ul class="navbar-list-none display-inline-grid">
+								<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+								                                                  href="Responsive_design_principles.html">Zasady projektowania</a></li>
+								<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="is-selected"><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+					<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+					<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+					<li><a href="Summary.html">Podsumowanie</a></li>
+				</ol>
+			</div>
+			<div class="line line-gray hide-e"></div>
+			<a class="navbar-link" href="https://www.chillcode.org/"><div
+					class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+			                                                                    class="icon-img-navbar hide-e"
+			                                                                    src="/img/Icons/icon_home(1).png"> Strona główna</span> <img
+					alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			<a class="navbar-link" href="../Blog.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+					alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_blog.png"> Blog</span> <img
+					alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			<a class="navbar-link" href="../About.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+					alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_about_us.png"> O nas</span> <img
+					alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			<a class="navbar-link" href="../Help.html"><div class="navbar-item text-nowrap navbar-menu-item"><span><img
+					alt="" class="icon-img-navbar hide-e" src="/img/Icons/icon_help.png"> Centrum pomocy</span> <img
+					alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+			<a class="navbar-link margin-bottom" href="../Support.html"><div
+					class="navbar-item text-nowrap navbar-menu-item"><span><img alt=""
+			                                                                    class="icon-img-navbar hide-e"
+			                                                                    src="/img/Icons/icon_donation.png"> Wsparcie</span> <img
+					alt="" class="right-arrow-icon hide-e" src="/img/Icons/icon_right-arrow.png"></div></a>
+		</div>
+		<div class="navbar-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</div>
+</div>
+
+	<div class="roadmap-list hide-roadmaplist">
+			<ol>
+		<li><a href="Introduction_to_Bootstrap.html">Wprowadzenie do Bootstrap</a></li>
+		<li><a href="Quick_start.html">Szybki start</a></li>
+		<li><a href="Grid_layout.html">Układ siatki Grid</a></li>
+		<li><a href="Class.html">Klasa</a></li>
+		<li><a href="Text_styles.html">Style tekstowe</a></li>
+		<li><a href="Components.html">Komponenty</a></li>
+		<li onclick="rotateTriangle(this)">
+			<a class="dropdown" onclick="toggleDropdown(this)"><span class="triangle"></span>Zasady projektowania</a>
+			<div class="dropdown-content">
+				<ul class="navbar-list-none display-inline-grid">
+					<li class="is-selected is-selected-margin-top"><a class="navbar-drop-text"
+					                                                  href="Responsive_design_principles.html">Zasady projektowania</a></li>
+					<li><a class="navbar-drop-text" href="Use_responsiveness.html">Użycie responsywności</a></li>
+				</ul>
+			</div>
+		</li>
+		<li class="is-selecteds"><a href="CSS_style_manipulation.html">Manipulacja stylami CSS</a></li>
+		<li><a href="Integration_with_other_libraries.html">Integracja z innymi bibliotekami</a></li>
+		<li><a href="Code_debugging.html">Debugowanie kodu</a></li>
+		<li><a href="Summary.html">Podsumowanie</a></li>
+	</ol>
+	</div>
+
+	<div class="opacity-function padding-content">
+		<div class="content">
+			<div class="section-with-image">
+				<div class="text-centered text-padding">
+					<h1>Manipulacja stylami CSS</h1>
+					<p>
+						Bootstrap 5 jest biblioteką stylów CSS, która zapewnia wiele gotowych stylów i komponentów, które możesz wykorzystać na swojej stronie internetowej. Jednak czasami będziesz chciał dostosować styl elementu do swoich potrzeb. W tym celu możesz użyć różnych technik manipulacji stylami CSS w Bootstrap 5.
+					</p>
+				</div>
+				<img alt="" src="/img/Vectors/vector129.png">
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_colorWheel.png"> Nadpisanie stylów CSS Bootstrapa</h3>
+			</div>
+			<p class="text-container lightOrange-container highlight-container">
+				Jeśli chcesz zmienić styl elementu, który jest już stylizowany przez Bootstrapa, możesz nadpisać styl Bootstrapa, używając własnych stylów CSS. Aby to zrobić, dodaj nową klasę CSS do elementu i nadpisz odpowiednie właściwości CSS. Na przykład, jeśli chcesz zmienić kolor przycisku Bootstrapa, możesz użyć poniższego kodu CSS:
+			</p>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-css">
+/* CSS */
+.btn-custom {
+  background-color: red;
+  color: white;
+}
+							</code>
+					</pre>
+			</div>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-xml">
+&lt;!-- HTML --&gt;
+&lt;button class=&quot;btn btn-primary btn-custom&quot;&gt;Custom Button&lt;/button&gt;
+							</code>
+					</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-clear">
+						<button class="btn-custom" style="background-color: #7b2222;">Custom Button</button>
+					</div>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_meter.png"> Wykorzystanie zmiennych CSS Bootstrapa</h3>
+			</div>
+			<p class="text-container gray-container">
+				Bootstrap 5 wprowadza zmienną CSS, która umożliwia łatwe dostosowanie stylów do potrzeb projektu. Aby skorzystać z tych zmiennych, musisz użyć właściwości var() w swoim stylu CSS i przypisać im wartości zmiennych Bootstrapa. Na przykład, jeśli chcesz dostosować kolor tła całej strony internetowej, możesz użyć poniższego kodu CSS:
+			</p>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code>
+body {
+background-color: var(--bs-primary);
+}
+							</code>
+					</pre>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_color-palette.png"> Dodawanie stylów CSS do konkretnych komponentów Bootstrapa</h3>
+			</div>
+			<p class="text-container lightOrange-container">
+				W Bootstrapie 5 każdy komponent ma swoją klasę CSS. Możesz dodać swoje własne style do konkretnego komponentu, dodając je po prostu do klasy komponentu. Na przykład, jeśli chcesz dodać dodatkowy margines do elementu typu card Bootstrapa, możesz użyć poniższego kodu CSS:
+			</p>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-css">
+/* CSS */
+.card {
+  margin-bottom: 20px;
+}
+							</code>
+					</pre>
+			</div>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-xml">
+&lt;!-- HTML --&gt;
+&lt;div class=&quot;card&quot;&gt;
+&lt;div class=&quot;card-body&quot;&gt;
+  &lt;h5 class=&quot;card-title&quot;&gt;Card Title&lt;/h5&gt;
+  &lt;p class=&quot;card-text&quot;&gt;Some quick example text to build on the of the content.&lt;/p&gt;
+  &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Go somewhere&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+							</code>
+					</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content">
+						<div class="card" style="margin-bottom: 20px;">
+							<div class="card-body">
+								<h5 class="card-title">Card Title</h5>
+								<p class="card-text">Some quick example text to build on the of the content.</p>
+								<a class="btn-custom btn-primary">Go somewhere</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="text-centered">
+				<h3 class="color-text-white"><img alt="" class="icon-img-small" src="/img/Icons/icon_paper.png"> Używanie pseudo-selektorów CSS</h3>
+			</div>
+			<p class="text-container gray-container">
+				Bootstrap 5 wykorzystuje wiele pseudo-selektorów CSS, które pozwalają na dostosowanie stylów w zależności od stanu elementu. Na przykład, jeśli chcesz zmienić kolor tekstu przycisku, gdy jest najechany, możesz użyć poniższego kodu CSS:
+			</p>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-css">
+/* CSS */
+.btn:hover {
+  color: pink;
+}
+							</code>
+					</pre>
+			</div>
+			<div class="code-block code-block-margin-top">
+					<pre>
+							<code class="language-xml">
+&lt;!-- HTML --&gt;
+&lt;button class=&quot;btn btn-primary&quot;&gt;Button&lt;/button&gt;
+							</code>
+					</pre>
+			</div>
+			<div class="dropdown minus-margin-top">
+				<button class="output-button" onclick="toggleDropdown(this)"><img alt=""
+				                                                                  class="icon-img-little"
+				                                                                  src="/img/Icons/icon_syntax.png"> Uruchom kod</button>
+				<div class="dropdown-content">
+					<div class="output output-content output-clear">
+						<button class="btn-custom btn-primary" style="color: pink;">Button</button>
+					</div>
+				</div>
+			</div>
+			<div class="page-header"></div>
+			<div class="alert-card  alert-card-blue">
+				<img alt="" src="/img/Icons/icon_emergency.png">
+				<b>Ważne</b>
+				<div class="line"></div>
+				<p>
+					Zmienne CSS są zdefiniowane w pliku bootstrap.scss i można do nich odwoływać się w innych plikach CSS.
+				</p>
+			</div>
+			<div class="alert-card ">
+				<img alt="" src="/img/Icons/icon_note.png">
+				<b>Notatka</b>
+				<div class="line"></div>
+				<p>
+					Bootstrap 5 daje dużą swobodę w manipulacji stylami CSS, co umożliwia dostosowanie wyglądu stron internetowych do indywidualnych potrzeb i preferencji.
+				</p>
+			</div>
+			<div class="big-page-header"></div>
+			<div class="btn">
+				<a href="Integration_with_other_libraries.html"><button>Dalej</button></a>
+			</div>
+
+		</div>
+	</div>
+</div>
+</body>
+</html>
