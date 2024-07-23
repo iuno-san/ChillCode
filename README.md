@@ -1,5 +1,5 @@
-# <a target="_blank" href="https://www.chillcode.org/"><img width="35" height="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
-<a target="_blank" href="https://www.chillcode.org/"><img src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/blog-img(1).png" /></a>
+# <a target="_blank" href="https://chillcode.vercel.app/"><img width="35" height="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/white_buckles.png" /></a> ChillCode - Programming learning platform
+<a target="_blank" href="https://chillcode.vercel.app/"><img src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Others/blog-img(1).png" /></a>
 
 # 🌎👨🏻‍💻 ChillCode already has over 2,000 users
 ChillCode is a revolutionary and inclusive learning platform designed to provide aspiring programmers and coding enthusiasts with a comprehensive resource to learn the art of programming at their own pace. Offering a wide array of beginner-friendly tutorials and practical examples, ChillCode aims to empower individuals with the knowledge and skills <br><br>
@@ -41,104 +41,104 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
 
 
 ## 🔥🤖 All available Tutorials
-<a target="_blank" href="https://www.chillcode.org/Tutorial_hub.html"><img src="https://www.chillcode.org/img/Others/blog_img(6).png" /></a>
-<!--https://www.chillcode.org/Tutorial_hub.html-->
+<a target="_blank" href="https://chillcode.vercel.app/Tutorial_hub.html"><img src="https://chillcode.vercel.app/img/Others/blog_img(6).png" /></a>
+<!--https://chillcode.vercel.app/Tutorial_hub.html-->
 
 <details>
-  <summary><h4><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_html(1).png"/></a> Html</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/HTML-Basic/Introduction_to_HTML.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_html(1).png"/></a> Html</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Introduction_to_HTML.html">Introduction to HTML</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Quick_start.html">Quick start</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Base_HTML_document.html">Base_HTML_document</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Paragraph.html">Paragraph</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Paragraph_heading.html">Heading</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Paragraph_new_line.html">New line</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Text_HTML.html">Text formatting</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Comments.html">Comments</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Colors.html">Colors</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Color_values.html">Color values</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Color_names.html">Color names</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Attributes.html">Attributes</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/List.html">Ordered list</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/List_unordered.html">Unordered list</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/List_definition.html">Definition list</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Lists_nesting.html">Nesting lists</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Links.html">Links</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Link_section.html">Section links</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Link_sitelink.html">Sitelinks</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Images.html">Images</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Images_width_and_height.html">Width and Height</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Images_title_and_signature.html">Title and Signature</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Tabels.html">Tabels</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Table_scope.html">Table scope</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Table_sections.html">Table sections</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Table_attributes.html">Table attributes</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Symbols.html">Symbols</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Quotations.html">Quotations</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Quote_elements.html">Quote elements</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Block_elements.html">Block elements</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Linear_elements.html">Line elements</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Class_Id.html">Classes and IDs</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Layout_HTML.html">Page layout</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Responsiveness.html">Website responsiveness</a></li>
-      <li><a href="https://www.chillcode.org/HTML-Basic/Summary.html">Summary</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Introduction_to_HTML.html">Introduction to HTML</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Quick_start.html">Quick start</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Base_HTML_document.html">Base_HTML_document</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Paragraph.html">Paragraph</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Paragraph_heading.html">Heading</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Paragraph_new_line.html">New line</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Text_HTML.html">Text formatting</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Comments.html">Comments</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Colors.html">Colors</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Color_values.html">Color values</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Color_names.html">Color names</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Attributes.html">Attributes</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/List.html">Ordered list</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/List_unordered.html">Unordered list</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/List_definition.html">Definition list</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Lists_nesting.html">Nesting lists</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Links.html">Links</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Link_section.html">Section links</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Link_sitelink.html">Sitelinks</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Images.html">Images</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Images_width_and_height.html">Width and Height</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Images_title_and_signature.html">Title and Signature</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Tabels.html">Tabels</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Table_scope.html">Table scope</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Table_sections.html">Table sections</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Table_attributes.html">Table attributes</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Symbols.html">Symbols</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Quotations.html">Quotations</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Quote_elements.html">Quote elements</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Block_elements.html">Block elements</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Linear_elements.html">Line elements</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Class_Id.html">Classes and IDs</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Layout_HTML.html">Page layout</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Responsiveness.html">Website responsiveness</a></li>
+      <li><a href="https://chillcode.vercel.app/HTML-Basic/Summary.html">Summary</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_css(1).png"/></a> CSS</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/CSS-Basic/Introduction_to_CSS.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_css(1).png"/></a> CSS</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/CSS-Basic/Introduction_to_CSS.html">Introduction to CSS</a></li>
+      <li><a href="https://chillcode.vercel.app/CSS-Basic/Introduction_to_CSS.html">Introduction to CSS</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_javaScript-icon.png"/></a> JavaScript</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/JavaScript-Basic/Introduction_to_JavaScript.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_javaScript-icon.png"/></a> JavaScript</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/JavaScript-Basic/Introduction_to_JavaScript.html">Introduction to JavaScript</a></li>
+      <li><a href="https://chillcode.vercel.app/JavaScript-Basic/Introduction_to_JavaScript.html">Introduction to JavaScript</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_jquery(1).png"/></a> jQuery</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/jQuery-Basic/Introduction_to_jQuery.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_jquery(1).png"/></a> jQuery</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/jQuery-Basic/Introduction_to_jQuery.html">Introduction to jQuery</a></li>
+      <li><a href="https://chillcode.vercel.app/jQuery-Basic/Introduction_to_jQuery.html">Introduction to jQuery</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_bootstrap.png"/></a> Bootstrap</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/Bootstrap-Basic/Introduction_to_Bootstrap.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_bootstrap.png"/></a> Bootstrap</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/Bootstrap-Basic/Introduction_to_Bootstrap.html">Introduction to Bootstrap</a></li>
+      <li><a href="https://chillcode.vercel.app/Bootstrap-Basic/Introduction_to_Bootstrap.html">Introduction to Bootstrap</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_cplusplus-logo.png"/></a> C++</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/Cplusplus/Introduction_to_Cpp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_cplusplus-logo.png"/></a> C++</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/Cplusplus/Introduction_to_Cpp.html">Introduction to C++</a></li>
+      <li><a href="https://chillcode.vercel.app/Cplusplus/Introduction_to_Cpp.html">Introduction to C++</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_c-sharp.png"/></a> C#</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/Csharp-basic/Introduction_to_Csharp.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_c-sharp.png"/></a> C#</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/Csharp-basic/Introduction_to_Csharp.html">Introduction to C#</a></li>
+      <li><a href="https://chillcode.vercel.app/Csharp-basic/Introduction_to_Csharp.html">Introduction to C#</a></li>
     </ol>
   </div>
 </details>
 <details>
-  <summary><h4><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_NET_Core_Logo.png"/></a> ASP.NET</h4></summary>
+  <summary><h4><a href="https://chillcode.vercel.app/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html"><img width="30" src="https://raw.githubusercontent.com/Chillcode-Official/ChillCode/main/img/Icons/icon_NET_Core_Logo.png"/></a> ASP.NET</h4></summary>
   <div>
     <ol>
-      <li><a href="https://www.chillcode.org/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Introduction to ASP.NET</a></li>
+      <li><a href="https://chillcode.vercel.app/ASP.NET-CORE-Basic/Introduction_to_ASP.NET-Core.html">Introduction to ASP.NET</a></li>
     </ol>
   </div>
 </details>
@@ -146,7 +146,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
 
 ## 🤝 Support
 
-For support, email support@chillcode.org or https://www.chillcode.org/ContactUs.html
+For support, email support@chillcode.org or https://chillcode.vercel.app/ContactUs.html
 
 
 ## 🌱 Feedback
