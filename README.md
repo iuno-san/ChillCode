@@ -41,7 +41,7 @@ https://gtmetrix.com/reports/www.chillcode.org/A3gdcrWk/
 
 
 ## 🔥🤖 All available Tutorials
-<a target="_blank" href="/Tutorial_hub.html"><img src="/img/Others/blog_img(6).png" /></a>
+<a target="_blank" href="/Tutorial_hub.html"><img src="https://raw.githubusercontent.com/iuno-san/ChillCode/main/chillcode/img/Others/blog_img(6).png" /></a>
 <!--/Tutorial_hub.html-->
 
 <details>
